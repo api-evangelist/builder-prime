@@ -1,0 +1,157 @@
+generated: '2026-08-08'
+method: probed
+source: https://www.builderprime.com/blog/open-api-documentation
+note: >-
+  Cross-cutting request/response semantics for the Builder Prime Open API. There
+  is no OpenAPI to derive from, so every statement below is either quoted from
+  the provider's live documentation page or observed directly against the live
+  API host on 2026-08-08. Where a convention is simply not published, it is
+  recorded as unknown rather than guessed.
+
+authentication:
+  style: api-key-header
+  header: x-api-key
+  tenancy: subdomain-per-customer
+  see: authentication/builder-prime-authentication.yml
+
+versioning:
+  scheme: per-resource-path-segment
+  description: >-
+    The version is a segment on each resource collection rather than a single
+    global prefix — /api/clients/v1, /api/employees/v1, /api/projects/v1. Each
+    resource can therefore version independently.
+  current: v1
+  observed_on:
+  - /api/clients/v1
+  - /api/client-activities/v1
+  - /api/employees/v1
+  - /api/projects/v1
+  - /api/meetings/v1
+  - /api/meeting-types/v1
+  - /api/meeting-results/v1
+  header_versioning: false
+  date_versioning: false
+
+base_url:
+  pattern: https://{subdomain}.builderprime.com
+  description: >-
+    The tenant is carried by the hostname. The subdomain is the first label of
+    the URL the customer signs in with; Builder Prime instructs customers to send
+    it to the integrating application along with the key.
+  shared_host_observed: https://app.builderprime.com
+
+resources:
+- name: clients
+  path: /api/clients/v1
+  methods_allowed: [POST, OPTIONS]
+  note: Write-only collection. Used to create leads/clients from a sending application.
+- name: client-activities
+  path: /api/client-activities/v1
+  methods_allowed: [POST, OPTIONS]
+- name: employees
+  path: /api/employees/v1
+  methods_allowed: [GET, HEAD, OPTIONS]
+  note: Read-only collection.
+- name: projects
+  path: /api/projects/v1
+  methods_allowed: [POST, GET, HEAD, OPTIONS]
+- name: meetings
+  path: /api/meetings/v1
+  methods_allowed_unverified: true
+- name: meeting-types
+  path: /api/meeting-types/v1
+  methods_allowed_unverified: true
+- name: meeting-results
+  path: /api/meeting-results/v1
+  methods_allowed_unverified: true
+methods_source: >-
+  methods_allowed values were read from the Allow response header returned by an
+  unauthenticated OPTIONS request on 2026-08-08. Resources marked
+  methods_allowed_unverified were confirmed to exist (401 on GET) but their
+  Allow header was not captured.
+
+error_envelope:
+  format: vendor-json
+  rfc9457: false
+  shape: '{"success": false, "errors": [{"code": "...", "message": "..."}]}'
+  see: errors/builder-prime-problem-types.yml
+
+idempotency:
+  supported: unknown
+  documented: false
+  header: null
+  note: >-
+    Builder Prime publishes no idempotency contract. No idempotency key header is
+    documented anywhere on the public surface, and there is no OpenAPI in which
+    such a parameter could be declared. Recorded as unknown — NOT as absent — and
+    deliberately given no Idempotency pointer in apis.yml, because asserting
+    idempotency support this provider has not published would be a fabrication.
+    This is a gap for Builder Prime to close: the clients collection is
+    POST-only lead creation, exactly the shape where a retried request silently
+    duplicates a lead.
+
+pagination:
+  style: page-and-limit
+  parameters:
+  - name: page
+    documented: false
+  - name: limit
+    documented: false
+  confidence: low
+  basis: >-
+    page and limit query parameters are used by the third-party n8n community
+    node against these endpoints. Builder Prime documents no pagination contract
+    publicly, and the response envelope for a paginated read could not be
+    observed without a tenant key.
+
+filtering:
+  incremental_read:
+    parameter: since
+    style: last-modified watermark
+    confidence: low
+    basis: >-
+      The third-party n8n trigger polls /api/projects/v1 using a last-modified
+      watermark. Builder Prime publishes no incremental-read contract.
+
+request_tracing:
+  request_id_header: null
+  documented: false
+
+rate_limiting:
+  documented: false
+  headers_observed: none
+  note: >-
+    No rate-limit headers were present on any observed response, and no rate
+    limits are published. See rate-limits/ — no artifact was written because
+    there is nothing published to record.
+
+content_type:
+  request: application/json
+  response: application/json
+
+field_conventions:
+  description: >-
+    Builder Prime documents that several optional fields on an inbound lead are
+    matched by NAME against values already configured in the tenant, and that a
+    mismatch fails the whole request. This is a real and unusual convention: the
+    API is name-coupled to per-tenant configuration rather than to stable ids.
+  match_by_name_fields:
+  - leadStatusName
+  - leadSourceName
+  - salesPersonFirstName
+  - salesPersonLastName
+  - leadSetterFirstName
+  - leadSetterLastName
+  - className
+  - projectTypeName
+  failure_mode: >-
+    "These fields are optional, but if they are included in the data, the values
+    must match exactly to one of the values that you have set up in Builder
+    Prime, or the request will fail."
+  source: https://www.builderprime.com/blog/open-api-documentation
+
+cross_links:
+  authentication: authentication/builder-prime-authentication.yml
+  errors: errors/builder-prime-problem-types.yml
+  lifecycle: lifecycle/builder-prime-lifecycle.yml
+  webhooks: asyncapi/builder-prime-webhooks.yml

@@ -1,0 +1,121 @@
+generated: '2026-08-08'
+method: probed
+source: https://developer.builderprime.com/api/
+format: vendor-json
+rfc9457: false
+note: >-
+  Builder Prime publishes no OpenAPI and no public error reference, so this
+  catalog is not derived from a spec — every entry below was observed directly by
+  sending unauthenticated requests to the live API host on 2026-08-08 and
+  recording the exact response body. Nothing here is inferred.
+
+envelopes:
+- id: api-error
+  description: >-
+    The Open API application error envelope. Returned by the API layer for
+    authentication and validation failures.
+  shape:
+    success: boolean
+    errors:
+    - code: string
+      message: string
+  content_type: application/json
+  example_observed: '{"success":false,"errors":[{"code":"API_GENERAL","message":"Unauthorized: Invalid key"}]}'
+- id: platform-error
+  description: >-
+    The platform/routing error envelope. Returned for unknown paths — a different
+    shape from the API error envelope, which makes it a reliable control for
+    telling a real resource apart from a non-existent one.
+  shape:
+    errorCode: string
+    errorMessage: string
+    showAsWarning: boolean
+  content_type: application/json
+  example_observed: '{"errorCode":"404","errorMessage":"The requested resource was not found.","showAsWarning":false}'
+- id: spring-error
+  description: >-
+    The framework error envelope, surfaced for HTTP method violations before the
+    API layer is reached.
+  shape:
+    timestamp: string
+    status: integer
+    error: string
+    path: string
+  content_type: application/json
+  example_observed: '{"timestamp":"2026-08-08T14:59:54.271Z","status":405,"error":"Method Not Allowed","path":"/api/clients/v1"}'
+
+problems:
+- status: 401
+  code: API_GENERAL
+  title: 'Unauthorized: Invalid key'
+  envelope: api-error
+  meaning: >-
+    The x-api-key header was missing, malformed, or is not a valid key for this
+    tenant.
+  remediation: >-
+    Generate a key under Admin > Integrations > Open API in the tenant whose
+    subdomain you are calling, and send it in the x-api-key header. Keys are
+    tenant-scoped — a key from one subdomain will not authenticate against
+    another.
+  observed_on:
+  - https://developer.builderprime.com/api/employees/v1
+  - https://developer.builderprime.com/api/projects/v1
+  - https://developer.builderprime.com/api/meetings/v1
+  - https://developer.builderprime.com/api/meeting-types/v1
+  - https://developer.builderprime.com/api/meeting-results/v1
+- status: 400
+  code: API_GENERAL
+  title: Invalid request
+  envelope: api-error
+  meaning: >-
+    The request reached the API layer but could not be interpreted — observed on
+    the shared application host, where the tenant cannot be resolved from the
+    hostname.
+  remediation: >-
+    Call the customer's own subdomain host rather than a shared host, and confirm
+    the request body matches the documented field names.
+  observed_on:
+  - https://app.builderprime.com/api/employees/v1
+- status: 404
+  code: '404'
+  title: The requested resource was not found.
+  envelope: platform-error
+  meaning: The path does not correspond to any route on this host.
+  remediation: Check the resource name and the /v1 version segment in the path.
+  observed_on:
+  - https://developer.builderprime.com/api/bogus-does-not-exist/v1
+- status: 405
+  title: Method Not Allowed
+  envelope: spring-error
+  meaning: >-
+    The path exists but does not accept this HTTP method. Observed on the
+    write-only collections, which accept POST but not GET.
+  remediation: >-
+    Send OPTIONS to the path and read the Allow header. /api/clients/v1 and
+    /api/client-activities/v1 answer "POST,OPTIONS"; /api/employees/v1 answers
+    "GET,HEAD,OPTIONS"; /api/projects/v1 answers "POST,GET,HEAD,OPTIONS".
+  observed_on:
+  - https://developer.builderprime.com/api/clients/v1
+  - https://developer.builderprime.com/api/client-activities/v1
+
+gaps:
+- >-
+  No public error reference. Builder Prime documents no error codes, so
+  API_GENERAL is the only application error code observed and its full domain is
+  unknown.
+- >-
+  The single API_GENERAL code carries both 401 and 400 conditions, so the code
+  alone is not sufficient for a client to branch on — callers must read the HTTP
+  status and the human-readable message string.
+- Errors are not RFC 9457 (application/problem+json) and carry no type URI.
+
+x-evidence:
+  checked: '2026-08-08'
+  method: unauthenticated HTTP requests, with a known-bad control path to rule out soft-404s
+  control_path:
+    url: https://developer.builderprime.com/api/bogus-does-not-exist/v1
+    http_status: 404
+    note: >-
+      Returns the platform-error envelope, structurally different from the 401
+      api-error envelope returned by the real resources — confirming the 401s are
+      genuine auth challenges on live routes.

@@ -42,5 +42,22 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Builder Prime is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Builder Prime is an all-in-one CRM and business management platform built for home improvement
+contractors and remodelers — lead and client management, appointment setting, estimating and price
+books, proposals and e-signature contracts, project and production scheduling, invoicing and
+payments, SMS and email, and sales reporting. Each customer works from its own subdomain, and
+Builder Prime exposes a REST "Open API" plus webhooks and a Zapier app.
+
+- Website: https://www.builderprime.com/
+- Open API documentation: https://www.builderprime.com/blog/open-api-documentation
+- Knowledge base: https://help.builderprime.com/bp-knowledgebase
+- Integrations: https://www.builderprime.com/integrations
+- Status: https://builderprime.statuspage.io/
+
+**Note on coverage.** The Open API is live and callable — its resource paths return real `401
+Unauthorized: Invalid key` responses while unknown paths return a different 404 envelope. But
+Builder Prime publishes **no OpenAPI definition**, and its knowledge-base API reference articles now
+return 404: the surviving public documentation page refers to "the document attached to this page",
+and that attachment is not present in the served page. The artifacts in this repository were
+assembled from the provider's published prose and from unauthenticated probes of the live API host —
+no endpoint, field, event, or schema has been invented on Builder Prime's behalf.

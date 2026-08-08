@@ -1,0 +1,33 @@
+generated: '2026-08-08'
+method: probed
+found: 0
+note: >-
+  Every /.well-known/ path was probed on the marketing host, the help/docs host
+  and the live API host. None returned a document. Recorded as an honest negative
+  probe log — no WellKnown or SecurityTxt pointer is emitted in apis.yml, because
+  nothing is published.
+
+hosts:
+- host: https://www.builderprime.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+- host: https://developer.builderprime.com
+  note: a live Builder Prime tenant host serving the Open API
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://help.builderprime.com
+  documents:
+  - {path: /llms.txt, status: 404}
+
+checked: '2026-08-08'

@@ -1,0 +1,49 @@
+generated: '2026-08-08'
+method: searched
+source: https://www.builderprime.com/integrations
+spec_type: none
+asyncapi_published: false
+
+webhooks:
+  advertised: true
+  advertised_on: https://www.builderprime.com/integrations
+  quote: >-
+    "There are a few ways to integrate with additional apps, you can use Zapier,
+    OpenAPI, and webhooks to connect any client or project data to Builder
+    Prime."
+  catalog_published: false
+  events: []
+  subscription_management_documented: false
+  payload_schemas_published: false
+  signature_verification_documented: false
+  retry_policy_documented: false
+
+note: >-
+  Builder Prime advertises webhooks as one of three supported integration
+  methods on its own live integrations page, but publishes no webhook catalog:
+  no event list, no payload schema, no subscription/registration reference, no
+  signature-verification scheme and no retry semantics. This artifact records the
+  advertisement and names the gap — it does NOT model events on Builder Prime's
+  behalf. No event names are invented here, and no AsyncAPI document is authored,
+  because doing so would assert a contract the provider has not published.
+
+corroboration:
+  note: >-
+    The only publicly inspectable Builder Prime event integration is the
+    third-party n8n community node, and it does NOT use webhooks — its trigger
+    polls /api/projects/v1 against a last-modified watermark. That is evidence
+    that a usable public webhook contract was not available to at least one
+    third-party integrator, not evidence that webhooks do not exist.
+  source: https://www.npmjs.com/package/n8n-nodes-builderprime
+
+provider_action:
+  - Publish the webhook event catalog with an event name and payload schema per event.
+  - Document how a subscription is created, listed and deleted.
+  - Document the signing scheme and the retry/backoff policy.
+  - Publish an AsyncAPI document describing the above.
+
+x-evidence:
+  fetched: '2026-08-08'
+  url: https://www.builderprime.com/integrations
+  http_status: 200
+  content_type: text/html

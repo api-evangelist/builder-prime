@@ -1,0 +1,82 @@
+generated: '2026-08-08'
+method: searched
+source: https://www.builderprime.com/integrations
+
+versioning:
+  scheme: per-resource-path-segment
+  current: v1
+  docs: null
+  policy_published: false
+  note: >-
+    Every Open API collection carries its own /v1 segment. Builder Prime
+    publishes no versioning policy explaining how a v2 would be introduced or how
+    long v1 is supported.
+
+deprecation:
+  policy_url: null
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  note: >-
+    No deprecation policy, no RFC 8594 Sunset/Deprecation header support
+    documented, and no deprecated-endpoint notice anywhere on the public surface.
+    No Deprecation pointer is emitted in apis.yml because there is no policy to
+    point at.
+
+sla:
+  url: null
+  uptime_target: null
+  published: false
+
+status_page:
+  url: https://builderprime.statuspage.io/
+  provider: Atlassian Statuspage
+  verified: true
+  linked_from: https://www.builderprime.com/ (footer, "System Status")
+  history_since: '2020-09-28'
+  components_observed:
+  - Web and Mobile Apps
+  - Xodo Sign eSignature Integration
+  api_component_listed: false
+  note: >-
+    The status page is real and first-party — its API reports page.name "Builder
+    Prime" and it is linked from the marketing site footer. It tracks the web and
+    mobile application and named third-party integrations, but no component
+    represents the Open API itself, so an integrator cannot see API health
+    separately from app health.
+  x-evidence:
+    url: https://builderprime.statuspage.io/api/v2/summary.json
+    http_status: 200
+    checked: '2026-08-08'
+
+changelog:
+  url: null
+  published: false
+  note: >-
+    No dated changelog or release-notes feed. Feature announcements are published
+    as individual marketing blog posts (for example
+    /blog/new-feature-spotlight-custom-project-statuses), which is not a
+    versioned change record and gives no API-level change history. No ChangeLog
+    pointer is emitted.
+
+api_documentation_lifecycle:
+  state: reference-withdrawn
+  note: >-
+    Builder Prime's API reference articles were previously published in the
+    HubSpot-hosted knowledge base at help.builderprime.com and are indexed by
+    search engines, but they now return 404. The surviving public API page is a
+    marketing blog post that describes key generation and refers to "the document
+    attached to this page" — an attachment that is not present in the served
+    HTML. The endpoint reference is therefore no longer publicly readable even
+    though the API itself is live.
+  evidence:
+  - url: https://help.builderprime.com/bp-knowledgebase/working-with-clients-through-the-api-1-0
+    http_status: 404
+  - url: https://help.builderprime.com/bp-knowledgebase/open-api-documentation
+    http_status: 200
+    note: 301s to https://www.builderprime.com/blog/open-api-documentation
+  - url: https://www.builderprime.com/blog/open-api-documentation
+    http_status: 200
+  checked: '2026-08-08'
+
+deprecated_operations: []

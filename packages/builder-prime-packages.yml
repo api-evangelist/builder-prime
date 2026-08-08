@@ -1,0 +1,60 @@
+generated: '2026-08-08'
+method: searched
+source: registry search — npm, PyPI, RubyGems, Packagist, crates.io, GitHub
+
+official_sdks: 0
+note: >-
+  Builder Prime publishes no first-party client library in any public package
+  registry, and its GitHub organization has zero public repositories. No SDKs
+  pointer is emitted in apis.yml because there is no official SDK to point at.
+  The one package below is a third-party community integration and is recorded
+  with official: false.
+
+packages:
+- language: javascript
+  registry: npm
+  name: n8n-nodes-builderprime
+  version_seen: 0.5.9
+  url: https://www.npmjs.com/package/n8n-nodes-builderprime
+  install: npm install n8n-nodes-builderprime
+  official: false
+  author: Webrunner Agents
+  source_code: https://github.com/webrunner-michael/n8n-nodes-builderprime
+  description: >-
+    Community n8n node for the Builder Prime CRM. Implements client, lead,
+    employee, project, appointment, appointment-type, appointment-result and
+    client-activity resources against https://{subdomain}.builderprime.com using
+    the x-api-key header, plus a polling trigger over /api/projects/v1.
+  note: >-
+    Not affiliated with Builder Prime. Catalogued because it is the only publicly
+    inspectable client for this API and it corroborates the endpoint paths and
+    auth header observed directly against the live host.
+
+registries_checked:
+- registry: npm
+  query: builderprime
+  official_hits: 0
+- registry: pypi
+  queries: [builderprime, builder-prime]
+  status: 404
+  official_hits: 0
+- registry: rubygems
+  query: builderprime
+  status: 404
+  official_hits: 0
+- registry: packagist
+  query: builderprime
+  official_hits: 0
+- registry: crates.io
+  query: builderprime
+  official_hits: 0
+- registry: github
+  org: https://github.com/Builder-Prime
+  status: 200
+  public_repos: 0
+  note: >-
+    The organization is verifiably Builder Prime's — its profile carries
+    blog https://www.builderprime.com and email hello@builderprime.com — but it
+    publishes no code, no specs and no SDKs.
+
+checked: '2026-08-08'

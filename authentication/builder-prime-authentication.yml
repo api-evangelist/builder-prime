@@ -1,0 +1,100 @@
+generated: '2026-08-08'
+method: searched
+source: https://www.builderprime.com/blog/open-api-documentation
+docs: https://www.builderprime.com/blog/open-api-documentation
+note: >-
+  Derived from the provider's own live "Open API Documentation" page plus
+  unauthenticated probes of the live API host. Builder Prime publishes no OpenAPI
+  definition, so there are no machine-readable securitySchemes to derive from —
+  this profile is assembled from published prose and observed 401 responses.
+
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+  multi_tenant: true
+
+schemes:
+- name: OpenApiSecretKey
+  type: apiKey
+  in: header
+  parameter_name: x-api-key
+  description: >-
+    A per-tenant secret key generated inside the Builder Prime application under
+    Admin > Integrations > Open API. The key is displayed exactly once at
+    generation time and cannot be retrieved again — a lost key must be
+    regenerated. Each key is given a name (typically the name of the sending
+    application) and a set of named permissions.
+  issuance:
+    self_service: true
+    requires_authenticated_tenant: true
+    path: Admin > Integrations > Open API > Generate New API Key
+    displayed_once: true
+    rotatable: true
+    rotation_method: generate-a-new-key
+  sources:
+  - https://www.builderprime.com/blog/open-api-documentation
+  x-evidence:
+  - what: header name x-api-key
+    confidence: medium
+    basis: >-
+      Named in the (now removed) Builder Prime knowledge-base articles
+      "Working with Clients through the API" and "Working with Employees through
+      the API", and independently used by the third-party n8n community node
+      n8n-nodes-builderprime, whose published source sends the tenant key in the
+      x-api-key header against https://{subdomain}.builderprime.com.
+    live_source_status:
+      url: https://help.builderprime.com/bp-knowledgebase/working-with-clients-through-the-api-1-0
+      http_status: 404
+      checked: '2026-08-08'
+  - what: an API key is required on every resource
+    confidence: high
+    basis: >-
+      Unauthenticated GET of the live resource paths returns HTTP 401 with the
+      body {"success":false,"errors":[{"code":"API_GENERAL","message":"Unauthorized:
+      Invalid key"}]}, while an unknown path on the same host returns a
+      structurally different 404 envelope. The 401 is therefore real
+      authentication, not a catch-all.
+    live_source_status:
+      url: https://developer.builderprime.com/api/employees/v1
+      http_status: 401
+      checked: '2026-08-08'
+
+tenancy:
+  model: subdomain-per-customer
+  description: >-
+    The API host is the customer's own Builder Prime subdomain — the first label
+    of the URL used to sign in to the web app. Builder Prime instructs customers
+    to send that subdomain to the integrating application alongside the secret
+    key, so the tenant is carried by the host rather than by a header or a path
+    segment.
+  documented_pattern: https://{subdomain}.builderprime.com
+  example_given_by_provider: https://johnsfloors.builderprime.com
+
+permissions:
+  model: named-permissions-per-key
+  description: >-
+    Keys are scoped by selecting named permissions when the key is generated.
+    Builder Prime does not publish the full permission list on any public page;
+    the values below are the ones named in public material.
+  observed:
+  - name: clients.create
+    description: Create new clients / leads.
+    source: https://www.builderprime.com/blog/open-api-documentation
+    confidence: high
+  - name: employees.read
+    description: Read a single employee and list employees.
+    source: >-
+      Named in the removed knowledge-base article "Working with Employees
+      through the API" (live URL now returns 404).
+    confidence: medium
+  complete: false
+  gap: >-
+    Builder Prime publishes no public permissions/scopes reference. The complete
+    list of key permissions is visible only inside an authenticated tenant on the
+    Admin > Integrations > Open API screen.
+
+oauth2: false
+openid_connect: false
+mutual_tls: false
+well_known_discovery: false
