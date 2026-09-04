@@ -23,6 +23,19 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  - security
+  generated: '2026-09-03'
+  method: derived
 image: https://cdn.prod.website-files.com/66dacc76fb28939d860bf57c/671740708dbd70842afe1db7_builder-prime-logo.webp
 specificationVersion: '0.23'
 created: '2026-08-08'
