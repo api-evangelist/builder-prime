@@ -1,0 +1,416 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/builder-prime/integrations
+checked:
+- https://composio.dev/toolkits/builder-prime
+- https://monid.ai/tools/builder-prime
+- https://n8n.io/integrations/builder-prime/
+- https://zapier.com/apps/builder-prime/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: builder-prime
+  url: https://zapier.com/apps/builder-prime/integrations
+  external_url: https://www.builderprime.com/
+  partner_tier: SILVER
+  triggers: []
+  actions:
+  - key: client
+    label: Create Client Record
+  searches: []
+edges:
+- partner_name: Gravity Forms
+  partner: gravity-forms
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/gravity-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://www.gravityforms.com/?utm_campaign=partners&utm_source=zapier-listing-learn-more&utm_medium=free-placement
+- partner_name: Instapage
+  partner: instapage
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/instapage
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://instapage.com/
+- partner_name: Facebook Lead Ads
+  partner: facebook-lead-ads
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/facebook-lead-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://www.facebook.com/business/ads/lead-ads
+- partner_name: Facebook Lead Ads (for Business admins)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/facebook-lead-ads-beta
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://facebook.com/
+- partner_name: CallRail
+  partner: callrail
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/callrail
+  direction: third-party
+  category: Call Tracking
+  partner_url: https://www.callrail.com/?utm_medium=strategicpartner&utm_source=zapier&utm_campaign=app_listing&utm_content=app_listing
+- partner_name: Breezy HR
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/breezy-hr
+  direction: third-party
+  category: HR Talent & Recruitment
+  partner_url: https://breezy.hr/
+- partner_name: Calendly
+  partner: calendly
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/calendly
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://calendly.com/?utm_medium=partner&utm_source=zapier&utm_campaign=main_partner_page&utm_content=main_inbound_link
+- partner_name: Google Sheets
+  partner: google-sheets
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/google-sheets
+  direction: third-party
+  category: Google
+  partner_url: http://sheets.google.com/
+- partner_name: AnswerForce
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/answerforce
+  direction: third-party
+  category: Customer Support
+  partner_url: https://www.answerforce.com/
+- partner_name: Mailchimp
+  partner: mailchimp
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/mailchimp
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://mailchimp.com/
+- partner_name: Tally
+  partner: tally
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/tally
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://try.tally.so/zapier
+- partner_name: LocaliQ
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/localiq
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://localiq.com/
+- partner_name: Predictive Sales AI
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/predictive-sales-ai
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.predictivesalesai.com/
+- partner_name: LSArespond
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/lsarespond
+  direction: third-party
+  category: Marketing
+  partner_url: https://www.lsarespond.com/
+- partner_name: Microsoft Excel
+  partner: null
+  partner_match: null
+  partner_candidate: zapier
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/excel
+  direction: third-party
+  category: Microsoft
+  partner_url: https://zapier.com/office.com
+- partner_name: Duda
+  partner: duda
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/duda
+  direction: third-party
+  category: Website Builders
+  partner_url: https://www.duda.co/
+- partner_name: zcal
+  partner: zcal
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/zcal
+  direction: third-party
+  category: Scheduling & Booking
+  partner_url: https://zcal.co/
+- partner_name: Handoff
+  partner: handoff
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/handoff
+  direction: third-party
+  category: Productivity
+  partner_url: https://handoff.ai/
+- partner_name: Contractors Cloud
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/contractors-cloud
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: http://www.contractorscloud.com/
+- partner_name: Toolsey
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/toolsey
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://devpro.toolsey.com/
+- partner_name: pulseM
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/pulsem
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://pulsem.me/
+- partner_name: Google Drive
+  partner: google-drive
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/google-drive
+  direction: third-party
+  category: File Management & Storage
+  partner_url: https://www.google.com/drive/
+- partner_name: Trello
+  partner: trello
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/trello
+  direction: third-party
+  category: Project Management
+  partner_url: https://trello.com/
+- partner_name: Facebook Conversions
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/facebook-conversions
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://developers.facebook.com/docs/marketing-api/server-side-api/guides/zapier-integration
+- partner_name: Instagram for Business
+  partner: instagram
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/instagram-for-business
+  direction: third-party
+  category: Facebook
+  partner_url: https://instagram.com/
+- partner_name: LinkedIn Ads
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/linkedin-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://www.linkedin.com/
+- partner_name: Microsoft Office 365
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/office-365
+  direction: third-party
+  category: Email
+  partner_url: https://www.office.com/
+- partner_name: Facebook Conversions (for Business admins)
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/facebook-conversions-business
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://developers.facebook.com/docs/marketing-api/server-side-api/guides/zapier-integration
+- partner_name: AgencyZoom
+  partner: agencyzoom
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/agencyzoom-ca67272
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: http://www.agencyzoom.com/
+- partner_name: Elfsight Forms
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/elfsight-forms
+  direction: third-party
+  category: Forms & Surveys
+  partner_url: https://elfsight.com/widgets/?category=forms
+templates:
+- title: Create new Builder Prime client records from WPForms form entries
+  url: https://zapier.com/apps/builder-prime/integrations/wpforms/1400139/create-new-builder-prime-client-records-from-wpforms-form-entries
+  apps:
+  - wpforms
+  - builder-prime
+- title: Create client records in Builder Prime for each new lead form entry in Google Ads
+  url: https://zapier.com/apps/builder-prime/integrations/google-ads/1596274/create-client-records-in-builder-prime-for-each-new-lead-form-entry-in-google-ads
+  apps:
+  - google-ads
+  - builder-prime
+- title: Create Builder Prime leads from new or updated Google Sheets rows
+  url: https://zapier.com/apps/builder-prime/integrations/google-sheets/1051035/create-builder-prime-leads-from-new-or-updated-google-sheets-rows
+  apps:
+  - google-sheets
+  - filter
+  - builder-prime
+- title: Create Builder Prime leads from newly caught webhooks
+  url: https://zapier.com/apps/builder-prime/integrations/webhook/1051039/create-builder-prime-leads-from-newly-caught-webhooks
+  apps:
+  - webhook
+  - builder-prime
+- title: Create client records in Builder Prime from new invitees in Calendly
+  url: https://zapier.com/apps/builder-prime/integrations/calendly/1051040/create-client-records-in-builder-prime-from-new-invitees-in-calendly
+  apps:
+  - calendly
+  - builder-prime
+- title: Create Builder Prime leads from newly parsed emails
+  url: https://zapier.com/apps/builder-prime/integrations/email-parser/1051043/create-builder-prime-leads-from-newly-parsed-emails
+  apps:
+  - email-parser
+  - builder-prime
+- title: Create Builder Prime leads from new Ninja Forms submissions
+  url: https://zapier.com/apps/builder-prime/integrations/ninjaforms/1051046/create-builder-prime-leads-from-new-ninja-forms-submissions
+  apps:
+  - ninjaforms
+  - builder-prime
+- title: Create client records in Builder Prime from new Gravity Forms submissions
+  url: https://zapier.com/apps/builder-prime/integrations/gravity-forms/1052885/create-client-records-in-builder-prime-from-new-gravity-forms-submissions
+  apps:
+  - gravity-forms
+  - builder-prime
+- title: Add new Spotio leads to Builder Prime
+  url: https://zapier.com/apps/builder-prime/integrations/spotio2/1052886/add-new-spotio-leads-to-builder-prime
+  apps:
+  - spotio2
+  - builder-prime
+- title: Add Builder Prime leads from new Wufoo entries
+  url: https://zapier.com/apps/builder-prime/integrations/wufoo/1052887/add-builder-prime-leads-from-new-wufoo-entries
+  apps:
+  - wufoo
+  - builder-prime
+- title: Create Builder Prime leads from new Jotform submissions
+  url: https://zapier.com/apps/builder-prime/integrations/jotform/1052888/create-builder-prime-leads-from-new-jotform-submissions
+  apps:
+  - jotform
+  - builder-prime
+- title: Add new or updated Sales Rabbit leads to Builder Prime
+  url: https://zapier.com/apps/builder-prime/integrations/salesrabbit/1052890/add-new-or-updated-sales-rabbit-leads-to-builder-prime
+  apps:
+  - salesrabbit
+  - builder-prime
+template_total: 66
