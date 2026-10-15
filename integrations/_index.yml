@@ -173,7 +173,6 @@
   arazzo: null
 - slug: builder-prime-microsoft-excel
   label: Microsoft Excel
-  partner: microsoft-excel
   partner_name: Microsoft Excel
   category: Microsoft
   type: marketplace
@@ -301,7 +300,6 @@
   arazzo: null
 - slug: builder-prime-linkedin-ads
   label: LinkedIn Ads
-  partner: linkedin-ads
   partner_name: LinkedIn Ads
   category: Ads & Conversion
   type: marketplace
@@ -313,7 +311,6 @@
   arazzo: null
 - slug: builder-prime-microsoft-office-365
   label: Microsoft Office 365
-  partner: microsoft-office-365
   partner_name: Microsoft Office 365
   category: Email
   type: marketplace
@@ -355,5 +352,30 @@
   channel: ipaas-usage
   evidence: https://zapier.com/apps/builder-prime/integrations/elfsight-forms
   source: edge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-zapier
+  label: Zapier
+  partner: zapier
+  partner_name: Zapier
+  type: marketplace
+  marketplace: zapier-directory
+  channel: ipaas-listing
+  evidence: https://zapier.com/apps/builder-prime/integrations
+  source: edge
+  relationship: ipaas-bridge
+  contract_reference:
+    register: Zapier app directory (zapier.com/api/v4/apps)
+    spec_file: null
+    role: ipaas-connector:zapier
+    registered_name: Builder Prime
+    matched_domain: builderprime.com
+    matched_by: domain
+    detected_by: sweep-workflow-automation.py
+    detected: '2026-10-15'
+    signal_note: one edge per (provider, platform); actions, triggers and usage counts are context, never read
+    app_slug: builder-prime
+    beta: false
+    builder: unknown (not in the directory record)
   status: pending-partner-spec
   arazzo: null
