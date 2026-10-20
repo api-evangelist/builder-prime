@@ -15,6 +15,7 @@
   evidence: https://zapier.com/apps/builder-prime/integrations/google-sheets/1051035/create-builder-prime-leads-from-new-or-updated-google-sheets-rows
   template: https://zapier.com/apps/builder-prime/integrations/google-sheets/1051035/create-builder-prime-leads-from-new-or-updated-google-sheets-rows
   source: template
+  relationship: ipaas-bridge
   status: pending-partner-spec
   arazzo: null
 - slug: builder-prime-create-client-records-in-builder-prime-from-new-invitees-in-calendly
@@ -29,6 +30,7 @@
   evidence: https://zapier.com/apps/builder-prime/integrations/calendly/1051040/create-client-records-in-builder-prime-from-new-invitees-in-calendly
   template: https://zapier.com/apps/builder-prime/integrations/calendly/1051040/create-client-records-in-builder-prime-from-new-invitees-in-calendly
   source: template
+  relationship: ipaas-bridge
   status: pending-partner-spec
   arazzo: null
 - slug: builder-prime-create-client-records-in-builder-prime-from-new-gravity-forms-submissions
@@ -43,315 +45,7 @@
   evidence: https://zapier.com/apps/builder-prime/integrations/gravity-forms/1052885/create-client-records-in-builder-prime-from-new-gravity-forms-submissions
   template: https://zapier.com/apps/builder-prime/integrations/gravity-forms/1052885/create-client-records-in-builder-prime-from-new-gravity-forms-submissions
   source: template
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-instapage
-  label: Instapage
-  partner: instapage
-  partner_name: Instapage
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/instapage
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-facebook-lead-ads
-  label: Facebook Lead Ads
-  partner: facebook-lead-ads
-  partner_name: Facebook Lead Ads
-  category: Ads & Conversion
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/facebook-lead-ads
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-facebook-lead-ads-for-business-admins
-  label: Facebook Lead Ads (for Business admins)
-  partner_name: Facebook Lead Ads (for Business admins)
-  category: Ads & Conversion
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/facebook-lead-ads-beta
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-callrail
-  label: CallRail
-  partner: callrail
-  partner_name: CallRail
-  category: Call Tracking
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/callrail
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-breezy-hr
-  label: Breezy HR
-  partner_name: Breezy HR
-  category: HR Talent & Recruitment
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/breezy-hr
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-answerforce
-  label: AnswerForce
-  partner_name: AnswerForce
-  category: Customer Support
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/answerforce
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-mailchimp
-  label: Mailchimp
-  partner: mailchimp
-  partner_name: Mailchimp
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/mailchimp
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-tally
-  label: Tally
-  partner: tally
-  partner_name: Tally
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/tally
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-localiq
-  label: LocaliQ
-  partner_name: LocaliQ
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/localiq
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-predictive-sales-ai
-  label: Predictive Sales AI
-  partner_name: Predictive Sales AI
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/predictive-sales-ai
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-lsarespond
-  label: LSArespond
-  partner_name: LSArespond
-  category: Marketing
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/lsarespond
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-microsoft-excel
-  label: Microsoft Excel
-  partner_name: Microsoft Excel
-  category: Microsoft
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/excel
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-duda
-  label: Duda
-  partner: duda
-  partner_name: Duda
-  category: Website Builders
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/duda
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-zcal
-  label: zcal
-  partner: zcal
-  partner_name: zcal
-  category: Scheduling & Booking
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/zcal
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-handoff
-  label: Handoff
-  partner: handoff
-  partner_name: Handoff
-  category: Productivity
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/handoff
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-contractors-cloud
-  label: Contractors Cloud
-  partner_name: Contractors Cloud
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/contractors-cloud
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-toolsey
-  label: Toolsey
-  partner_name: Toolsey
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/toolsey
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-pulsem
-  label: pulseM
-  partner_name: pulseM
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/pulsem
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-google-drive
-  label: Google Drive
-  partner: google-drive
-  partner_name: Google Drive
-  category: File Management & Storage
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/google-drive
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-trello
-  label: Trello
-  partner: trello
-  partner_name: Trello
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/trello
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-facebook-conversions
-  label: Facebook Conversions
-  partner_name: Facebook Conversions
-  category: Ads & Conversion
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/facebook-conversions
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-instagram-for-business
-  label: Instagram for Business
-  partner: instagram
-  partner_name: Instagram for Business
-  category: Facebook
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/instagram-for-business
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-linkedin-ads
-  label: LinkedIn Ads
-  partner_name: LinkedIn Ads
-  category: Ads & Conversion
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/linkedin-ads
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-microsoft-office-365
-  label: Microsoft Office 365
-  partner_name: Microsoft Office 365
-  category: Email
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/office-365
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-facebook-conversions-for-business-admins
-  label: Facebook Conversions (for Business admins)
-  partner_name: Facebook Conversions (for Business admins)
-  category: Ads & Conversion
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/facebook-conversions-business
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-agencyzoom
-  label: AgencyZoom
-  partner: agencyzoom
-  partner_name: AgencyZoom
-  category: CRM (Customer Relationship Management)
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/agencyzoom-ca67272
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: builder-prime-elfsight-forms
-  label: Elfsight Forms
-  partner_name: Elfsight Forms
-  category: Forms & Surveys
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/builder-prime/integrations/elfsight-forms
-  source: edge
+  relationship: ipaas-bridge
   status: pending-partner-spec
   arazzo: null
 - slug: builder-prime-zapier
@@ -378,4 +72,344 @@
     beta: false
     builder: unknown (not in the directory record)
   status: not-a-workflow
+  arazzo: null
+- slug: builder-prime-instapage
+  label: Instapage
+  partner: instapage
+  partner_name: Instapage
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/instapage
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-facebook-lead-ads
+  label: Facebook Lead Ads
+  partner: facebook-lead-ads
+  partner_name: Facebook Lead Ads
+  category: Ads & Conversion
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/facebook-lead-ads
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-facebook-lead-ads-for-business-admins
+  label: Facebook Lead Ads (for Business admins)
+  partner: facebook-lead-ads
+  partner_name: Facebook Lead Ads (for Business admins)
+  category: Ads & Conversion
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/facebook-lead-ads-beta
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-callrail
+  label: CallRail
+  partner: callrail
+  partner_name: CallRail
+  category: Call Tracking
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/callrail
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-breezy-hr
+  label: Breezy HR
+  partner_name: Breezy HR
+  category: HR Talent & Recruitment
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/breezy-hr
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-answerforce
+  label: AnswerForce
+  partner_name: AnswerForce
+  category: Customer Support
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/answerforce
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-mailchimp
+  label: Mailchimp
+  partner: mailchimp
+  partner_name: Mailchimp
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/mailchimp
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-tally
+  label: Tally
+  partner: tally
+  partner_name: Tally
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/tally
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-localiq
+  label: LocaliQ
+  partner_name: LocaliQ
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/localiq
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-predictive-sales-ai
+  label: Predictive Sales AI
+  partner_name: Predictive Sales AI
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/predictive-sales-ai
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-lsarespond
+  label: LSArespond
+  partner_name: LSArespond
+  category: Marketing
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/lsarespond
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-microsoft-excel
+  label: Microsoft Excel
+  partner_name: Microsoft Excel
+  category: Microsoft
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/excel
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-duda
+  label: Duda
+  partner: duda
+  partner_name: Duda
+  category: Website Builders
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/duda
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-zcal
+  label: zcal
+  partner: zcal
+  partner_name: zcal
+  category: Scheduling & Booking
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/zcal
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-handoff
+  label: Handoff
+  partner: handoff
+  partner_name: Handoff
+  category: Productivity
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/handoff
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-contractors-cloud
+  label: Contractors Cloud
+  partner_name: Contractors Cloud
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/contractors-cloud
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-toolsey
+  label: Toolsey
+  partner_name: Toolsey
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/toolsey
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-pulsem
+  label: pulseM
+  partner_name: pulseM
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/pulsem
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-google-drive
+  label: Google Drive
+  partner: google-drive
+  partner_name: Google Drive
+  category: File Management & Storage
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/google-drive
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-trello
+  label: Trello
+  partner: trello
+  partner_name: Trello
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/trello
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-facebook-conversions
+  label: Facebook Conversions
+  partner: facebook
+  partner_name: Facebook Conversions
+  category: Ads & Conversion
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/facebook-conversions
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-instagram-for-business
+  label: Instagram for Business
+  partner: instagram
+  partner_name: Instagram for Business
+  category: Facebook
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/instagram-for-business
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-linkedin-ads
+  label: LinkedIn Ads
+  partner: linkedin-ads
+  partner_name: LinkedIn Ads
+  category: Ads & Conversion
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/linkedin-ads
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-microsoft-office-365
+  label: Microsoft Office 365
+  partner_name: Microsoft Office 365
+  category: Email
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/office-365
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-facebook-conversions-for-business-admins
+  label: Facebook Conversions (for Business admins)
+  partner: facebook
+  partner_name: Facebook Conversions (for Business admins)
+  category: Ads & Conversion
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/facebook-conversions-business
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-agencyzoom
+  label: AgencyZoom
+  partner: agencyzoom
+  partner_name: AgencyZoom
+  category: CRM (Customer Relationship Management)
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/agencyzoom-ca67272
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: builder-prime-elfsight-forms
+  label: Elfsight Forms
+  partner_name: Elfsight Forms
+  category: Forms & Surveys
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/builder-prime/integrations/elfsight-forms
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
   arazzo: null
